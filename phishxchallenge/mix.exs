@@ -10,7 +10,16 @@ defmodule Phishxchallenge.MixProject do
       compilers: [:gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+
+      #ExDoc
+      name: "PhishXchallenge",
+      source_url: "https://github.com/brunowvisk/phishxchallenge",
+      homepage_url: "www.github.com/brunowvisk",
+      docs: [
+        main: "Phishxchallenge",
+        extras: ["README.md"]
+      ]
     ]
   end
 
@@ -49,7 +58,8 @@ defmodule Phishxchallenge.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:tesla, "~> 1.4.4"}
+      {:tesla, "~> 1.4.4"},
+      {:ex_doc, "~> 0.28.4", only: :dev, runtime: false}
     ]
   end
 

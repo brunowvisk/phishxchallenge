@@ -5,9 +5,9 @@ defmodule Phishxchallenge.CompanyOverview do
   @primary_key {:id, Ecto.UUID, autogenerate: true}
 
   schema "companyOverview" do
-    field :symbol, :string
-    field :assetType, :string
-    field :name, :string
+    field :Symbol, :string
+    field :AssetType, :string
+    field :Name, :string
     field :CIK, :integer
     field :Exchange, :string
     field :Currency, :string
@@ -20,14 +20,13 @@ defmodule Phishxchallenge.CompanyOverview do
     field :MarketCapitalization, :float
     field :EBITDA, :float
     field :EVToEBITDA, :float
-    field :EnterpriseValue, :float
     timestamps()
   end
 
   @required_fields [
-    :symbol,
-    :assetType,
-    :name,
+    :Symbol,
+    :AssetType,
+    :Name,
     :CIK,
     :Exchange,
     :Currency,
@@ -39,8 +38,7 @@ defmodule Phishxchallenge.CompanyOverview do
     :LatestQuarter,
     :MarketCapitaliztion,
     :EBITDA,
-    :EVToEBITDA,
-    :EnterpriseValue
+    :EVToEBITDA
   ]
 
   def build(params) do

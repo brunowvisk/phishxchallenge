@@ -1,7 +1,13 @@
 defmodule Phishxchallenge.AvIndex.Get do
+  @moduledoc """
+    In this module, we have a get method.
+  """
   alias Phishxchallenge.AlphavantageApi.Client
   alias Phishxchallenge.AvIndex
 
+  @doc """
+    The call method is used here to get all data from companies overview.
+  """
   def call(symbol) do
     symbol
     |> Client.get_companyoverview()

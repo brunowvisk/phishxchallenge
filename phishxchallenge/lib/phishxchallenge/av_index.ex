@@ -1,4 +1,7 @@
 defmodule Phishxchallenge.AvIndex do
+  @moduledoc """
+    In this module, we have build method and enforce keys and keys.
+  """
   @keys [
     :Symbol,
     :AssetType,
@@ -22,6 +25,9 @@ defmodule Phishxchallenge.AvIndex do
   @derive Jason.Encoder
   defstruct @keys
 
+  @doc """
+    This method aims to build all information we need to insert in the database.
+  """
   def build(%{
     "Symbol" => symbol,
     "AssetType" => assetType,

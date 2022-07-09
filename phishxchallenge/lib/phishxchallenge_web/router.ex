@@ -18,7 +18,7 @@ defmodule PhishxchallengeWeb.Router do
     pipe_through :api
 
     get "/companyoverview/:symbol", AvIndexController, :show
-    resources "/:symbol", PhishxchallengeController, only: [:create]
+    resources "/:symbol", PhishxController, only: [:create, :index]
 
   end
 
